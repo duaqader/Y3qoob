@@ -10,8 +10,9 @@ void ft_putnbr(int nb)
 {
     unsigned int i;
     i = 0;
-    while (nb != '\0')
+    while (nb[i] != '\0')
     {
         i++;
     }
+  write(1, nb[i],1);
 }
