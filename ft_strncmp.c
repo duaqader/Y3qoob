@@ -28,17 +28,30 @@ int main() {
     char str3[] = "Hellp";
     char str4[] = "He";
     
-    // Compare strings
+    // Compare strings using ft_strncmp
     int result1 = ft_strncmp(str1, str2, 5);
     int result2 = ft_strncmp(str1, str3, 5);
     int result3 = ft_strncmp(str1, str4, 2);
     int result4 = ft_strncmp(str3, str4, 3);
     
+    // Compare strings using standard strncmp
+    int std_result1 = strncmp(str1, str2, 5);
+    int std_result2 = strncmp(str1, str3, 5);
+    int std_result3 = strncmp(str1, str4, 2);
+    int std_result4 = strncmp(str3, str4, 3);
+    
     // Print the results
-    printf("Comparison result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str2, 5, result1);
-    printf("Comparison result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str3, 5, result2);
-    printf("Comparison result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str4, 2, result3);
-    printf("Comparison result between \"%s\" and \"%s\" up to %d characters: %d\n", str3, str4, 3, result4);
+    printf("ft_strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str2, 5, result1);
+    printf("strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str2, 5, std_result1);
+    
+    printf("ft_strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str3, 5, result2);
+    printf("strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str3, 5, std_result2);
+    
+    printf("ft_strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str4, 2, result3);
+    printf("strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str1, str4, 2, std_result3);
+    
+    printf("ft_strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str3, str4, 3, result4);
+    printf("strncmp result between \"%s\" and \"%s\" up to %d characters: %d\n", str3, str4, 3, std_result4);
     
     return 0;
 }
