@@ -14,6 +14,5 @@ int ft_strlen(char *str)
     {
         i++;
     }
-    write(1,i,1);
     return(i);
 }
