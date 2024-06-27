@@ -7,6 +7,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
 
 char *ft_strcat(char *dest, char *src)
 {
@@ -28,14 +29,19 @@ char *ft_strcat(char *dest, char *src)
 }
 
 int main() {
-    char dest[50] = "Hello, "; // Ensure dest has enough space to hold the concatenated result
+    char dest1[50] = "Hello, "; // Ensure dest1 has enough space to hold the concatenated result
+    char dest2[50] = "Hello, "; // Separate buffer for standard strcat
     char src[] = "World!";
     
-    // Concatenate src to dest
-    ft_strcat(dest, src);
+    // Concatenate src to dest1 using ft_strcat
+    ft_strcat(dest1, src);
     
-    // Print the concatenated result
-    printf("Concatenated string: %s\n", dest);
+    // Concatenate src to dest2 using standard strcat
+    strcat(dest2, src);
+    
+    // Print the results
+    printf("Result using ft_strcat: %s\n", dest1);
+    printf("Result using standard strcat: %s\n", dest2);
     
     return 0;
 }
