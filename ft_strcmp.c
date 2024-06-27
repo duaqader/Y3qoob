@@ -25,17 +25,30 @@ int main() {
     char str3[] = "Helloo";
     char str4[] = "Hell";
     
-    // Compare strings
+    // Compare strings using ft_strcmp
     int result1 = ft_strcmp(str1, str2);
     int result2 = ft_strcmp(str1, str3);
     int result3 = ft_strcmp(str1, str4);
     int result4 = ft_strcmp(str3, str4);
     
+    // Compare strings using standard strcmp
+    int std_result1 = strcmp(str1, str2);
+    int std_result2 = strcmp(str1, str3);
+    int std_result3 = strcmp(str1, str4);
+    int std_result4 = strcmp(str3, str4);
+    
     // Print the results
-    printf("Comparison result between \"%s\" and \"%s\": %d\n", str1, str2, result1);
-    printf("Comparison result between \"%s\" and \"%s\": %d\n", str1, str3, result2);
-    printf("Comparison result between \"%s\" and \"%s\": %d\n", str1, str4, result3);
-    printf("Comparison result between \"%s\" and \"%s\": %d\n", str3, str4, result4);
+    printf("ft_strcmp result between \"%s\" and \"%s\": %d\n", str1, str2, result1);
+    printf("strcmp result between \"%s\" and \"%s\": %d\n", str1, str2, std_result1);
+    
+    printf("ft_strcmp result between \"%s\" and \"%s\": %d\n", str1, str3, result2);
+    printf("strcmp result between \"%s\" and \"%s\": %d\n", str1, str3, std_result2);
+    
+    printf("ft_strcmp result between \"%s\" and \"%s\": %d\n", str1, str4, result3);
+    printf("strcmp result between \"%s\" and \"%s\": %d\n", str1, str4, std_result3);
+    
+    printf("ft_strcmp result between \"%s\" and \"%s\": %d\n", str3, str4, result4);
+    printf("strcmp result between \"%s\" and \"%s\": %d\n", str3, str4, std_result4);
     
     return 0;
 }
