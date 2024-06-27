@@ -7,7 +7,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 *******************************************************************************/
 #include <unistd.h>
 #include <stdio.h>
-
+#include <string.h>
 int ft_strcmp(char *s1, char *s2)
 {
     unsigned int i = 0;
