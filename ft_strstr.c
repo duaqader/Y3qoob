@@ -16,16 +16,12 @@ char *ft_strstr(char *str, char *to_find)
     j = 0;
     while (str[i] != '\0')
     {
+        if (str[i] == to_find[j])
+        {
+            return (to_find[j]);
+            j++;
+        }
         i++;
     }
-    while (to_find[j] != '\0')
-    {
-        j++;
-    }
-    if (str[i] == to_find[j])
-    {
-        Write(1, to_find[j],1);
-    }
-    str[i] = '\0'; 
-    return(to_find)
+   str[i] = '\0';
 }
